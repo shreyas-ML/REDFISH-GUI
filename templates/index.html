@@ -1,0 +1,150 @@
+<html>
+    <head>
+      <style>
+      body {background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs6Hj-gGrW83AAUTw_4qU6OqA6MS_GQPDKjQ&usqp=CAU) ;height: 100vh;background-size: cover; background-position: center; }
+      ul {    float: left;   list-style-type: none; margin-top: 75px;}
+      ul li {display: inline-block; }
+      ul li a { text-decoration: none;  color: #fff; padding: 5px 20px; border: 1px solid #fff; transition: 0.6s;} 
+      ul li a:hover{
+        background-color: white; color:black;
+      }
+      input[type=text]{
+        
+        width: 250px;
+        margin: 8px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+        
+      }
+      input[type=password]{
+        margin-top: 50px;
+        width: 250px;
+        margin: 8px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+
+      }
+
+
+      label{
+       
+        width: 250px;
+        margin: 8px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+        font-size: larger;
+        color: #fff;
+
+      }
+
+      input:focus{
+        background-color: lightblue;
+      }
+
+      .logo img{
+        float: left;
+        width: 150px;
+        height: 150px;
+      }
+      .logo2 img{
+        float: right;
+        width: 150px;
+        height: 150px;
+      }
+      .main {
+        max-width: 1850px;
+        margin: auto;
+
+      }
+
+
+
+      select {
+        width: 250px;
+        margin: 8px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: none;
+        font-size: large;
+      
+      }
+
+
+
+      input[type=submit]{
+
+        width: 75px;
+        height: 25px;
+        
+
+      }
+     
+
+      .container {
+        width: 1100px;  
+        height: 1000px;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        font-size: larger;
+      }
+
+      /*.form { align-items: center;}*/
+      </style>
+        <title>Home page</title>
+       
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        </head>
+        <body>
+          <header>
+       
+        <div class="main">
+          <div class="logo">
+            <img src="https://www.logolynx.com/images/logolynx/a0/a030714c82f1095bbcda91d2cc2aadbc.png">
+          </div>
+          <div class="logo2">
+            <img src="https://redfish.dmtf.org/sites/default/files/DMTF_Redfish_logo_R.jpg">
+          </div>
+          
+          <ul>
+            <li><a href='/index'>Home</a></li>
+            <li><a href='https://redfish.dmtf.org/'>Redfish</a></li>
+          </ul>
+
+        </div>
+
+        <div class="container">
+         <br><br><br><br><br><br><br><br><br>
+          <form action = "/result" method = "post">
+                <label for="host">BMC URI:</label><br>
+                <input type="text" id="host" name="host"><br><br>
+                <label for="uname">User name:</label><br>
+                <input type="text" id="uname" name="uname"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="Password" name="Password"><br><br>
+                <label for="API">Choose API to run:</label><br>
+              
+
+<select name="API" id="API"><br>
+  <option value="get_lan_config">Get lan config</option>
+  <option value="list_sensors">List Sensors</option>
+  <option value="SEL_Logs">Sel Logs</option>
+  <option value="BMC_info">BMC info</option>
+  <option value="PSU_FW">PSU FW Version info</option>
+  <option value="Monitor">Hardware Monitoring</option>
+  <option value="Memory">Memory Collection</option>
+</select>
+               <br> <input type="submit" value="Submit">
+              </form>
+            </div>
+            
+            
+
+             
+            </header>
+        </body>
+</html>

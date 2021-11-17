@@ -1,0 +1,17 @@
+*{
+    margin : 0;
+    padding : 0;
+    
+}
+
+header{
+    background-image: url(../images/blue.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float: left;
+    list-style-type: square;
+}
